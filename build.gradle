@@ -26,12 +26,19 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
+    compile('org.jetbrains.kotlinx:kotlinx-support-jdk8:0.3')
     compile('org.springframework.cloud:spring-cloud-starter-stream-rabbit')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('io.github.microutils:kotlin-logging:1.4.2')
-    //runtime('org.springframework.boot:spring-boot-starter-logging')
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile('com.github.kittinunf.fuel:fuel:1.4.0')
+    compile('com.natpryce:konfig:1.4.2.0')
+    compile('net.jodah:failsafe:1.0.1')
+    compile('org.openehealth.ipf.modules:ipf-modules-cda-mdht:3.2-20161124')
+    compile('com.googlecode.libphonenumber:libphonenumber:8.0.0')
+    compile('com.fasterxml.jackson.module:jackson-module-kotlin:2.8.4')
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-joda:2.8.4")
+    compile('com.google.guava:guava:21.0')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.cloud:spring-cloud-stream-test-support')
     testCompile('junit:junit:4.12')

@@ -1,11 +1,24 @@
 debug: true
 server:
   port: 8080
+
 spring:
   cloud:
     stream:
       bindings:
-        workInput:
-          destination: workDestination
-        workOutput:
-          destination: workDestination
+        apptRequestIn:
+          destination: appointments
+        apptRequestOut:
+          destination: appointments
+        docRequestIn:
+          destination: docs
+        docRequestOut:
+          destination: docs
+        archiveRequestIn:
+          destination: archives
+        archiveRequestOut:
+          destination: archives
+        summaryRequestIn:
+          destination: summaries
+        summaryRequestOut:
+          destination: summaries

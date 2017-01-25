@@ -6,8 +6,9 @@ import org.springframework.integration.annotation.IntegrationComponentScan
 
 @SpringBootApplication
 @IntegrationComponentScan
-class WorkDispatcherMain
+class PullPatients
 
 fun main(args: Array<String>) {
-    SpringApplication.run(WorkDispatcherMain::class.java, *args)
+    SpringApplication.run(PullPatients::class.java, *args)
 }
+

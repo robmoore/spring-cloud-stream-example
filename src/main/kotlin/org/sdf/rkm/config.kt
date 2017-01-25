@@ -1,8 +1,0 @@
-package org.sdf.rkm
-
-import org.springframework.cloud.stream.annotation.EnableBinding
-import org.springframework.context.annotation.Configuration
-
-@Configuration
-@EnableBinding(WorkOutput::class, WorkInput::class)
-class IntegrationConfiguration
