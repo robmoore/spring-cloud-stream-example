@@ -8,17 +8,25 @@ spring:
       bindings:
         apptRequestIn:
           destination: appointments
+          group: pipeline
         apptRequestOut:
           destination: appointments
+          group: pipeline
         docRequestIn:
           destination: docs
+          group: pipeline
         docRequestOut:
           destination: docs
+          group: pipeline
         archiveRequestIn:
           destination: archives
+          group: pipeline
         archiveRequestOut:
           destination: archives
+          group: pipeline
         summaryRequestIn:
           destination: summaries
+          group: pipeline
         summaryRequestOut:
           destination: summaries
+          group: pipeline
