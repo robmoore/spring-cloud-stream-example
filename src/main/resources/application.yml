@@ -5,7 +5,7 @@ spring:
   cloud:
     stream:
       bindings:
-        input:
-          destination: test1
-        output:
-          destination: test1
+        workInput:
+          destination: workDestination
+        workOutput:
+          destination: workDestination
