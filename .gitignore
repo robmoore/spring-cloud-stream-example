@@ -46,3 +46,5 @@ fabric.properties
 
 /cloud-stream.ipr
 /cloud-stream.iml
+/spring-cloud-stream-example.ipr
+/spring-cloud-stream-example.iml
