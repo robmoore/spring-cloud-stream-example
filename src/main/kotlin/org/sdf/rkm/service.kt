@@ -58,7 +58,7 @@ class Greenway(val config: Configuration = ConfigurationProperties.fromResource(
     }
 
     fun pullAppointments(appointmentsRequest: AppointmentsRequest): Stream<Int> {
-        val weeks = splitIntoWeeks(LocalDate.parse(appointmentsRequest.start), LocalDate.parse(appointmentsRequest.end))
+        val weeks = splitIntoWeeks(appointmentsRequest.start, appointmentsRequest.end)
 
         val patientList = weeks.parallel().flatMap {
             getPatientList(it.first, it.second)

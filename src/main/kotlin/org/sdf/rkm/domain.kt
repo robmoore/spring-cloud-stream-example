@@ -13,8 +13,8 @@ import org.springframework.messaging.SubscribableChannel
 // send to archive step -> takes doc ID -> outputs archive
 // send to aggregate step -> takes archive -> outputs summary
 
-data class AppointmentsRequest(val start: String = LocalDate.now().minusYears(2).toString(),
-                               val end: String = LocalDate.now().toString())
+data class AppointmentsRequest(val start: LocalDate = LocalDate.now().minusYears(2),
+                               val end: LocalDate = LocalDate.now())
 
 data class DocumentRequest(val sourcePatientId: Int)
 

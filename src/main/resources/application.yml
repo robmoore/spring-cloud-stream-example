@@ -1,7 +1,6 @@
 debug: true
 server:
   port: 8080
-
 spring:
   cloud:
     stream:
@@ -9,24 +8,28 @@ spring:
         apptRequestIn:
           destination: appointments
           group: pipeline
+          content-type: application/json
         apptRequestOut:
           destination: appointments
-          group: pipeline
+          content-type: application/json
         docRequestIn:
           destination: docs
           group: pipeline
+          content-type: application/json
         docRequestOut:
           destination: docs
-          group: pipeline
+          content-type: application/json
         archiveRequestIn:
           destination: archives
           group: pipeline
+          content-type: application/json
         archiveRequestOut:
           destination: archives
-          group: pipeline
+          content-type: application/json
         summaryRequestIn:
           destination: summaries
           group: pipeline
+          content-type: application/json
         summaryRequestOut:
           destination: summaries
-          group: pipeline
+          content-type: application/json

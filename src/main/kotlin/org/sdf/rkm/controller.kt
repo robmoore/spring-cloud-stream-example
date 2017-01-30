@@ -17,7 +17,7 @@ class PatientPullController(val apptGateway: AppointmentGateway) {
             LocalDate.now().minusWeeks(2)
         else
             LocalDate.parse(start)
-        val request = AppointmentsRequest(start = startDate.toString())
+        val request = AppointmentsRequest(start = startDate)
         logger.debug { "Received request to pull patients - $request" }
         apptGateway.pull(request)
         return ResponseEntity.ok().build()
